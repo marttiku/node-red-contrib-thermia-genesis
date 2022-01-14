@@ -1,0 +1,43 @@
+<script type="text/javascript">
+    RED.nodes.registerType('thermia-genesis',{
+        category: 'function',
+        color: '#FFAAAA',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        credentials: {
+            username: {type:"text"},
+            password: {type:"password"}
+        },
+        icon: "font-awesome/fa-fire",
+        label: function() {
+            return this.name||"thermia-genesis";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="thermia-genesis">
+    <div class="form-row">
+        <label for="node-input-username"><i class="fa fa-tag"></i> Username</label>
+        <input type="text" id="node-input-username">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="fa fa-tag"></i> Password</label>
+        <input type="password" id="node-input-password">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="thermia-genesis">
+    <p>This node will help you to automate Thermia Genesis heat pumps</p>
+    <p>Possible inputs:</p>
+    <p>{msg.payload.action:"setTemperature",msg.payload.param:<desired room temperature in degrees>}</p>    
+    <p>{msg.payload.action:"setHotWater",msg.payload.param:<true or false>}</p> 
+    <p>Any input - pump status in output </p>    
+   
+</script>
