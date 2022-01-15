@@ -1,7 +1,7 @@
 {
   "name": "node-red-contrib-thermia",
   "version": "1.0.0",
-  "description": "Thermia",
+  "description": "Node to access Thermia Genesis heat-pump",
   "main": "index.js",
   "author": "Martti Kuldma",
   "license": "ISC",
