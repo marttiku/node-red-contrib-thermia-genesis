@@ -16,10 +16,12 @@ Input your credentials for https://www.online-genesis.thermia.se/ in node config
 
 setTemperature - set point for the room temperature. Parms in payload
 
-`msg = {
+```
+msg = {
     action: 'setTemperature', 
     payload: 22               // set point for the room temperature
-}`
+}
+```
 
 ### Any other input
 
@@ -29,7 +31,9 @@ Status update
 
 Status of the heat pump
 
-`msg.payload = {
+```
+msg.payload = {
     hotWaterTemperature: 54,        // current hot water temperature
     heatingEffect: 22               // set point for the room temperature
-}`
+}
+```
