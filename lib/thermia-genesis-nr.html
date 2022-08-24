@@ -3,7 +3,8 @@
         category: 'climate',
         color: '#FFAAAA',
         defaults: {
-            name: {value:""}
+            name: {value:""},
+            installationid: {value:""}
         },
         inputs:1,
         outputs:1,
@@ -28,6 +29,10 @@
         <input type="password" id="node-input-password">
     </div>
     <div class="form-row">
+        <label for="node-input-installationid"><i class="fa fa-tag"></i> Installation ID</label>
+        <input type="text" id="node-input-installationid">
+    </div>
+    <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
@@ -35,9 +40,11 @@
 
 <script type="text/html" data-help-name="thermia-genesis">
     <p>This node will help you to automate Thermia Genesis heat pumps</p>
+    <p>You can leave Installation ID empty if you only have one pump to manage</p>
+    <p></p>
     <p>Possible inputs:</p>
-    <p>{msg.payload.action:"setTemperature",msg.payload.param:<desired room temperature in degrees>}</p>    
-    <p>{msg.payload.action:"setHotWater",msg.payload.param:<true or false>}</p> 
-    <p>Any input - pump status in output </p>    
+    <p>{msg.action:"setTemperature",msg.payload: desired room temperature in degrees}</p>    
+    <p>{msg.action:"setHotWater",msg.payload: true or false}</p> 
+    <p>Any other input - pump status in output </p>    
    
 </script>
