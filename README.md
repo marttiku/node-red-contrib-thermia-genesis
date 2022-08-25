@@ -8,7 +8,9 @@ Install the component
 
 ## Configuration
 
-Input your credentials for https://www.online-genesis.thermia.se/ in node configuration screen. It would be a good practice to create a sepearate user for the component.
+Enter your credentials for https://www.online-genesis.thermia.se/ in node configuration screen. It would be a good practice to create a sepearate user for the component. 
+
+If you have severeal pumps 
 
 ## Inputs
 
@@ -23,6 +25,15 @@ msg = {
 }
 ```
 
+setHotWater - set boiler status
+
+```
+msg = {
+    action: 'setHotWater', 
+    payload: false               // turn boiler off
+}
+```
+
 ### Any other input
 
 Status update
@@ -34,6 +45,8 @@ Status of the heat pump
 ```
 msg.payload = {
     hotWaterTemperature: 54,        // current hot water temperature
-    heatingEffect: 22               // set point for the room temperature
+    heatingEffect: 22,              // current set point for the room temperature
+    outdoorTemperature: 29,         // outdoor sensor value
+    hotWaterStatus: false           // boiler off
 }
 ```

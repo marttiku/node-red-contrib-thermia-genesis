@@ -1,0 +1,64 @@
+[
+    {
+        "id": "a239da61c62833d7",
+        "type": "debug",
+        "z": "2a82506345853599",
+        "name": "Pump status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c97fee58819c7668",
+        "type": "thermia-genesis",
+        "z": "2a82506345853599",
+        "name": "Thermia heat pump",
+        "installationid": "",
+        "credentials": {},
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "a239da61c62833d7"
+            ]
+        ]
+    },
+    {
+        "id": "1299e55510d0734b",
+        "type": "inject",
+        "z": "2a82506345853599",
+        "name": "Set Temperature",
+        "props": [
+            {
+                "p": "action",
+                "v": "setTemperature",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "21",
+        "payloadType": "num",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "c97fee58819c7668"
+            ]
+        ]
+    }
+]

@@ -6,14 +6,21 @@
   "author": "Martti Kuldma",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.24.0"
+    "axios": "^0.27.0"
   },
   "keywords": [
     "node-red"
   ],
   "node-red": {
     "nodes": {
-      "thermia-genesis": "lib/thermia-genesis-nr.js"
+      "thermia-genesis": "lib/thermia-genesis-nr.js",
+      "version": ">=2.0.0"
     }
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/marttiku/node-red-contrib-thermia-genesis/issues"
   }
 }
